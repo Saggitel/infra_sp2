@@ -5,9 +5,9 @@ from datetime import timedelta
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY: os.getenv('DB_SECRET_KEY')
+SECRET_KEY: os.getenv('SECRET_KEY', default='p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs')
 
-DEBUG: os.getenv('DB_DEBUG')
+DEBUG: os.getenv('DEBUG', default='False')
 
 
 ALLOWED_HOSTS = ['*']
@@ -100,11 +100,11 @@ LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
-USE_I18N: os.getenv('DB_USE_I18N')
+USE_I18N: os.getenv('USE_I18N', default='True')
 
-USE_L10N: os.getenv('DB_USE_L10N')
+USE_L10N: os.getenv('USE_L10N', default='True')
 
-USE_TZ: os.getenv('DB_USE_TZ')
+USE_TZ: os.getenv('USE_TZ', default='True')
 
 
 # Static files (CSS, JavaScript, Images)
