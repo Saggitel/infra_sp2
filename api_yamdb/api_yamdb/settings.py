@@ -5,7 +5,6 @@ from datetime import timedelta
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# без секретного ключа и дебага проект не проходит тесты при загрузке на ревью
 SECRET_KEY: os.getenv('DB_SECRET_KEY')
 
 DEBUG: os.getenv('DB_DEBUG')
