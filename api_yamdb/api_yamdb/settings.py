@@ -6,9 +6,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # без секретного ключа и дебага проект не проходит тесты при загрузке на ревью
-SECRET_KEY = 'p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs'
+SECRET_KEY: os.getenv('DB_SECRET_KEY')
 
-DEBUG = False
+DEBUG: os.getenv('DB_DEBUG')
 
 
 ALLOWED_HOSTS = ['*']
@@ -101,9 +101,11 @@ LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
-USE_L10N = True
+USE_I18N: os.getenv('DB_USE_I18N')
 
-USE_TZ = True
+USE_L10N: os.getenv('DB_USE_L10N')
+
+USE_TZ: os.getenv('DB_USE_TZ')
 
 
 # Static files (CSS, JavaScript, Images)

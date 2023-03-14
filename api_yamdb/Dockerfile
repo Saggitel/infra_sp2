@@ -1,13 +1,11 @@
 FROM python:3.7-slim
 
-RUN WORKDIR /app
+WORKDIR /app
 
 COPY . .
 
 RUN pip3 install -r requirements.txt
  
 COPY . /app
-
-WORKDIR /app
 
 CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:8000" ]
