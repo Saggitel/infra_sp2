@@ -11,7 +11,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # не пропускают тесты сайта если не указать правильный secret_key в default
 SECRET_KEY = os.getenv('SECRET_KEY', default='aboba')
 
-DEBUG = os.getenv('DEBUG', default='False')
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 
 ALLOWED_HOSTS = ['*']
